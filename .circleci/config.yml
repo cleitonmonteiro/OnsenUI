@@ -137,8 +137,20 @@ jobs:
       - deploy:
           name: Deployment
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "ci-artifacts" ]; then
               mkdir -p ~/artifacts
+              # onsenui
+              cd onsenui
+              CURRENT_VERSION=$(node -e "console.log(require('./package.json').version)")
+              npm version "$CURRENT_VERSION-build.$CIRCLE_BUILD_NUM" --no-git-tag-version
+              npm pack --pack-destination ~/artifacts
+              # react-onsenui
+              cd ../react-onsenui
+              CURRENT_VERSION=$(node -e "console.log(require('./package.json').version)")
+              npm version "$CURRENT_VERSION-build.$CIRCLE_BUILD_NUM" --no-git-tag-version
+              npm pack --pack-destination ~/artifacts
+              # vue3-onsenui
+              cd ../vue3-onsenui
               CURRENT_VERSION=$(node -e "console.log(require('./package.json').version)")
               npm version "$CURRENT_VERSION-build.$CIRCLE_BUILD_NUM" --no-git-tag-version
               npm pack --pack-destination ~/artifacts
