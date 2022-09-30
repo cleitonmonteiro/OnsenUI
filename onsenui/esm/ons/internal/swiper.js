@@ -113,7 +113,7 @@ export default class Swiper {
   }
 
   get itemNumSize() {
-    if (typeof this._itemNumSize !== 'number' || this._itemNumSize !== this._itemNumSize) {
+    if (typeof this._itemNumSize !== 'number' || this._itemNumSize === 0) {
       this._itemNumSize = this._calculateItemSize();
     }
     return this._itemNumSize;
