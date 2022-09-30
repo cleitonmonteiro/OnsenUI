@@ -32,11 +32,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/OnsenUI/OnsenUI"
+    "url": "https://github.com/cleitonmonteiro/OnsenUI"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/OnsenUI/OnsenUI/issues"
+    "url": "https://github.com/cleitonmonteiro/OnsenUI/issues"
   },
   "keywords": [
     "phonegap",
