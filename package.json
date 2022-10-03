@@ -1,9 +1,10 @@
 {
-  "name": "onsenui",
-  "version": "2.11.2",
+  "name": "@cleitonmonteiro/onsenui",
+  "version": "2.11.3",
   "description": "HTML5 Mobile Framework & UI Components",
   "private": false,
   "scripts": {
+    "build:core": "npm run build:js && npm run build:css && npm run build:css-components && npm run build:copy",
     "build": "npm run build:js && npm run build:css && npm run build:css-components && npm run build:copy && npm run build:docs && npm run build:zip",
     "build:docs": "node scripts/build-docs.js",
     "build:js": "npm run build:js:rollup && npm run build:js:minify && npm run build:js:babel-esm-elements && npm run build:js:babel-esm-ons",
@@ -42,11 +43,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/OnsenUI/OnsenUI"
+    "url": "https://github.com/cleitonmonteiro/OnsenUI"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/OnsenUI/OnsenUI/issues"
+    "url": "https://github.com/cleitonmonteiro/OnsenUI/issues"
   },
   "keywords": [
     "phonegap",

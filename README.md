@@ -1,3 +1,5 @@
+NOTE: This package has been forked from https://github.com/OnsenUI/OnsenUI
+
 
 <p align="center"><a href="https://onsen.io/" target="_blank"><img width="140" src="https://onsenui.github.io/art/logos/onsenui-logo-1.png"></a></p>
 
